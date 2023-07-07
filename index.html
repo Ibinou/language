@@ -12,60 +12,6 @@
   <button id="btn-en">English</button>
   <button id="btn-fr">French</button>
 
-  <script>
-// Traductions en anglais
-var enTranslations = {
-  "home": "Home",
-  "about": "About",
-  "contact": "Contact"
-};
-
-// Traductions en français
-var frTranslations = {
-  "home": "Accueil",
-  "about": "À propos",
-  "contact": "Contact"
-};
-
-// Fonction pour charger les traductions
-function loadTranslations(language) {
-  var translations;
-  if (language === 'en') {
-    translations = enTranslations;
-  } else if (language === 'fr') {
-    translations = frTranslations;
-  }
-
-  document.getElementById('home').innerText = translations.home;
-  document.getElementById('about').innerText = translations.about;
-  document.getElementById('contact').innerText = translations.contact;
-}
-
-// Fonction pour changer la langue
-function changeLanguage(language) {
-  loadTranslations(language);
-  localStorage.setItem('language', language);
-}
-
-// Vérifie si la langue est déjà enregistrée dans le local storage
-var savedLanguage = localStorage.getItem('language');
-if (savedLanguage) {
-  changeLanguage(savedLanguage);
-} else {
-  // Chargement initial des traductions (langue par défaut)
-  changeLanguage('en');
-}
-
-// Fonction pour changer la langue en anglais
-document.getElementById('btn-en').addEventListener('click', function() {
-  changeLanguage('en');
-});
-
-// Fonction pour changer la langue en français
-document.getElementById('btn-fr').addEventListener('click', function() {
-  changeLanguage('fr');
-});
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
