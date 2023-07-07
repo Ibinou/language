@@ -6,6 +6,7 @@ function loadTranslations(language) {
       document.getElementById('home').innerText = data.home;
       document.getElementById('about').innerText = data.about;
       document.getElementById('contact').innerText = data.contact;
+      document.getElementById('him').innerText = data.him;
     });
 }
 
